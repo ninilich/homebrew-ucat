@@ -5,21 +5,21 @@
 class Ucat < Formula
   desc "Declarative management of Databricks Unity Catalog managed tables from YAML"
   homepage "https://github.com/ninilich/ucat"
-  version "0.0.1-rc.2"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ninilich/ucat/releases/download/v0.0.1-rc.2/ucat_darwin_amd64.tar.gz"
-      sha256 "a39f3ed997477097aef5a51be3979129ec89a95c27b3f0d47b681e41912e0389"
+      url "https://github.com/ninilich/ucat/releases/download/v1.0.0/ucat_darwin_amd64.tar.gz"
+      sha256 "c242e2af30659953ab91c1f57048df871ba75e7f5dcf07738c69be7785721327"
 
       define_method(:install) do
         bin.install "ucat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ninilich/ucat/releases/download/v0.0.1-rc.2/ucat_darwin_arm64.tar.gz"
-      sha256 "c7e7b3fc09a82b5dbd2ef1695a12bbb7030de5c15b57ddf565be95d90ea396af"
+      url "https://github.com/ninilich/ucat/releases/download/v1.0.0/ucat_darwin_arm64.tar.gz"
+      sha256 "498edcc0f85fa224e71d4caf93fc951f650e40c1b1bb3251dc75d77da81d5aea"
 
       define_method(:install) do
         bin.install "ucat"
@@ -29,15 +29,15 @@ class Ucat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninilich/ucat/releases/download/v0.0.1-rc.2/ucat_linux_amd64.tar.gz"
-      sha256 "996316bbc572ffc8cfe29ea62805b19aacb86790538bc8b3e309596ec0a10724"
+      url "https://github.com/ninilich/ucat/releases/download/v1.0.0/ucat_linux_amd64.tar.gz"
+      sha256 "77729b7c8f2f79a0ee71b95ee9da374dc56fe3d33449597da11fcc77eb279813"
       define_method(:install) do
         bin.install "ucat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninilich/ucat/releases/download/v0.0.1-rc.2/ucat_linux_arm64.tar.gz"
-      sha256 "943136e47baa754fea0403c7f540a1e9b7e4be29ea4a45e087a7253425bba17a"
+      url "https://github.com/ninilich/ucat/releases/download/v1.0.0/ucat_linux_arm64.tar.gz"
+      sha256 "b13b0c664b3a3e0f9db76239637108aad7fce8ccc9c65d95984e08595f40287d"
       define_method(:install) do
         bin.install "ucat"
       end
